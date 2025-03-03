@@ -5,6 +5,78 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "serg",
+      "email": "ivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g6fsm7qo4p7b"
+    },
+    {
+      "name": "ааа",
+      "email": "ice@mail.ru",
+      "password": "111",
+      "id": "cbxn5gbngm7qo6vpm"
+    },
+    {
+      "name": "serg12",
+      "email": "iiivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g6l8m7qopdyq"
+    },
+    {
+      "name": "serg",
+      "email": "333ivan@demo.ru",
+      "password": "12",
+      "id": "cbxn5g25cm7qor08h"
+    },
+    {
+      "name": "serg",
+      "email": "oooivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g85cm7qosesn"
+    },
+    {
+      "name": "www",
+      "email": "eeivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g1gwm7qossm5"
+    },
+    {
+      "name": "serg",
+      "email": "ertivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g48sm7qoz48u"
+    },
+    {
+      "name": "serg",
+      "email": "cvcbivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5ga0om7qp3b0y"
+    },
+    {
+      "name": "serg",
+      "email": "fghgjivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g7jcm7qp5u73"
+    },
+    {
+      "name": "www",
+      "email": "jhgivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g8t4m7qpdwx2"
+    },
+    {
+      "name": "dert",
+      "email": "fdfgivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g8egm7rqbmnn"
+    },
+    {
+      "name": "trast",
+      "email": "qivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g538m7rqckhu"
     }
   ],
   "accounts": [
@@ -22,6 +94,56 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "trast",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5g5gkm7rtgvb8"
+    },
+    {
+      "name": "банк",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5g94m7s0tco6"
+    },
+    {
+      "name": "trast111",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5gam8m7s0yv3g"
+    },
+    {
+      "name": "dert12",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5g8agm7s170jn"
+    },
+    {
+      "name": "121344",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5g95gm7s17lsh"
+    },
+    {
+      "name": "676576",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5g5z4m7s18x85"
+    },
+    {
+      "name": "122345",
+      "user_id": "cbxn5g538m7rqckhu",
+      "id": "cbxn5gb8gm7s2mbt6"
+    },
+    {
+      "name": "1235456",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "id": "cbxn5g53cm7s3h2dn"
+    },
+    {
+      "name": "еще один счет",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "id": "cbxn5g5n4m7s8l4a3"
+    },
+    {
+      "name": "банк",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "id": "cbxn5g2o8m7temyk5"
     }
   ],
   "transactions": [
@@ -159,6 +281,87 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "cbxn5g2fkm7s881uh",
+      "type": "expense",
+      "name": "казино",
+      "sum": 2000,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-02T22:52:31.960Z"
+    },
+    {
+      "id": "cbxn5g5hgm7s90sh5",
+      "type": "income",
+      "name": "работа",
+      "sum": 24000,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-02T23:14:52.840Z"
+    },
+    {
+      "id": "cbxn5g4f0m7s9cmai",
+      "type": "income",
+      "name": "подработка",
+      "sum": 8000,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-02T23:24:04.697Z"
+    },
+    {
+      "id": "cbxn5g6h4m7s9cxx0",
+      "type": "expense",
+      "name": "покупка помидор",
+      "sum": 1000,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-02T23:24:19.763Z"
+    },
+    {
+      "id": "cbxn5gb0km7t5i0u3",
+      "type": "income",
+      "name": "авпвп",
+      "sum": 12434,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T14:24:04.538Z"
+    },
+    {
+      "id": "cbxn5g49cm7tayxfx",
+      "type": "income",
+      "name": "у",
+      "sum": 1200,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T16:57:11.372Z"
+    },
+    {
+      "id": "cbxn5g50wm7tb0tnx",
+      "type": "expense",
+      "name": "5",
+      "sum": 1200,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T16:58:39.788Z"
+    },
+    {
+      "id": "cbxn5g63wm7tbwr29",
+      "type": "income",
+      "name": "у",
+      "sum": 1200,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T17:23:29.408Z"
+    },
+    {
+      "id": "cbxn5g6b4m7tcliy0",
+      "type": "income",
+      "name": "у",
+      "sum": 1200,
+      "account_id": "cbxn5g53cm7s3h2dn",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T17:42:45.287Z"
     }
   ]
 }

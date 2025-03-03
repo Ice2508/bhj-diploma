@@ -25,31 +25,29 @@ class User {
          * */
     static current() {
             const user = localStorage.getItem('user');
-            return user ? JSON.parse(user) : undefined;
+            return JSON.parse(user);
         }
         /**
          * Получает информацию о текущем
          * авторизованном пользователе.
          * */
-    static fetch(callback) {
-            createRequest({
-                url: `${this.URL}/current`,
-                method: 'GET',
-                callback: (err, response) => {
-                    if (err) {
-                        callback(err, null);
-                    } else {
-                        if (response.success) {
-                            this.setCurrent(response.user);
-                            callback(null, response);
-                        } else {
-                            this.unsetCurrent();
-                            callback(null, response);
-                        }
-                    }
+       static fetch(callback) {
+        createRequest({
+            url: `${this.URL}/current`,
+            method: 'GET',
+            callback: (err, response) => {
+                if (err) {
+                    callback(err, null);
+                } else if (response.success) {
+                    this.setCurrent(response.user);
+                    callback(null, response);
+                } else {
+                    this.unsetCurrent();
+                    callback(null, response);
                 }
-            });
-        }
+            }
+        });
+    }
         /**
          * Производит попытку авторизации.
          * После успешной авторизации необходимо
@@ -83,15 +81,13 @@ class User {
                 data,
                 callback: (err, response) => {
                     if (err) {
-                        callback(err, null);
-                    } else {
-                        if (response.success) {
-                            this.setCurrent(response.user);
-                            callback(null, response);
-                        } else {
-                            callback(null, response);
-                        }
-                    }
+                callback(err, null);
+            } else if (response.success) {
+                this.setCurrent(response.user);
+                callback(null, response);
+            } else {
+                callback(null, response);
+            }
                 }
             });
         }
@@ -106,13 +102,11 @@ class User {
             callback: (err, response) => {
                 if (err) {
                     callback(err, null);
+                } else if (response.success) {
+                    this.unsetCurrent();
+                    callback(null, response);
                 } else {
-                    if (response.success) {
-                        this.unsetCurrent();
-                        callback(null, response);
-                    } else {
-                        callback(null, response);
-                    }
+                    callback(null, response);
                 }
             }
         });

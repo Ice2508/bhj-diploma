@@ -4,25 +4,18 @@
  * */
 class Entity {
     static URL = '';
- constructor() {
-    this.xhr = new XMLHttpRequest();  
-}
-
-  /**
+/**
    * Запрашивает с сервера список данных.
    * Это могут быть счета или доходы/расходы
    * (в зависимости от того, что наследуется от Entity)
    * */
   static list(data, callback){
-    const listOptions = {
+    createRequest({
       url: this.URL, 
       method: 'GET',
       data: data, 
       callback: callback
-    };
-
-    
-    createRequest(listOptions);
+    });
   }
 
   /**
@@ -31,13 +24,13 @@ class Entity {
    * что наследуется от Entity)
    * */
   static create(data, callback) {
-     const createOptions = {
+    
+     createRequest( {
       url: this.URL,
       method: 'PUT',
       data: data,
       callback: callback
-     };
-     createRequest(createOptions);
+     });
   }
 
   /**
@@ -45,13 +38,13 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static remove(data, callback ) {
-     const removeOptions = {
+     
+    createRequest({
       url: this.URL,
       method: 'DELETE',
       data: data,
       callback: callback
-    };
-    createRequest(removeOptions);
+    });
   }
 }
 

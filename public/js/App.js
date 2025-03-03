@@ -135,6 +135,7 @@ class App {
    * и передаёт туда объект options
    * */
   static showPage(pageName, options) {
+    
     const page = this.getPage(pageName);
     page.render(options);
   }
