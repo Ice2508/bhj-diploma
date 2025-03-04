@@ -92,7 +92,7 @@ class TransactionsPage {
     render(options) {
             this.lastOptions = options;
             Account.get(options.account_id, (_, account) => {
-                if (account && account.data) { // Добавлена минимальная проверка
+                if (account && account.data) { 
                     this.renderTitle(account.data.name);
                 }
                 Transaction.list({
