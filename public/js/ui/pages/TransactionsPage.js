@@ -33,19 +33,19 @@ class TransactionsPage {
          * TransactionsPage.removeAccount соответственно
          * */
     registerEvents() {
+            // Делегирование событий через родительский элемент .content
+            const contentElement = document.querySelector('.content');
             const removeAccount = document.querySelector('.remove-account');
-            const transactionRemove = document.querySelectorAll('.transaction__remove');
             removeAccount.addEventListener('click', () => {
                 this.removeAccount();
-            })
-            if (transactionRemove.length > 0) {
-                transactionRemove.forEach(btnRemove => {
-                    btnRemove.addEventListener('click', () => {
-                        const transactionId = btnRemove.dataset.id;
-                        this.removeTransaction(transactionId);
-                    });
-                });
-            }
+            });
+            contentElement.addEventListener('click', (event) => {
+                const button = event.target.closest('.transaction__remove');
+                if (button) {
+                    const transactionId = button.dataset.id;
+                    this.removeTransaction(transactionId);
+                }
+            });
         }
         /**
          * Удаляет счёт. Необходимо показать диаголовое окно (с помощью confirm())
@@ -62,7 +62,7 @@ class TransactionsPage {
             }
             const userConfirmedAcc = confirm('Вы действительно хотите удалить счет?');
             if (userConfirmedAcc) {
-                Account.remove(this.lastOptions, (error, result) => {
+                Account.remove(this.lastOptions.account_id, () => {
                     this.clear();
                     App.updateWidgets();
                     App.updateForms();
@@ -90,22 +90,14 @@ class TransactionsPage {
          * в TransactionsPage.renderTransactions()
          * */
     render(options) {
-            if (!options || !options.account_id) {
-                console.log('Ошибка: отсутствуют данные для рендера или account_id');
-                return;
-            }
             this.lastOptions = options;
-            Account.get(options.account_id, (error, account) => {
-                if (error) {
-                    console.log('Ошибка при получении данных о счете:', error);
-                    return;
+            Account.get(options.account_id, (_, account) => {
+                if (account && account.data) { // Добавлена минимальная проверка
+                    this.renderTitle(account.data.name);
                 }
-                this.renderTitle(account.data.name);
-                Transaction.list(options.account_id, (error, transactions) => {
-                    if (error) {
-                        console.log('Ошибка при получении транзакций:', error);
-                        return;
-                    }
+                Transaction.list({
+                    account_id: options.account_id
+                }, (_, transactions) => {
                     this.renderTransactions(transactions);
                 });
             });
@@ -116,7 +108,9 @@ class TransactionsPage {
          * Устанавливает заголовок: «Название счёта»
          * */
     clear() {
-            this.renderTransactions([]);
+            this.renderTransactions({
+                data: []
+            });
             this.renderTitle('Название счёта');
         }
         /**
@@ -139,33 +133,29 @@ class TransactionsPage {
          * item - объект с информацией о транзакции
          * */
     getTransactionHTML(item) {
-            const formattedDate = this.formatDate(item.created_at);
-            const transactionTypeClass = item.type === 'income' ? 'transaction_income' : 'transaction_expense';
-            const transactionIcon = item.type === 'income' ? 'fa-arrow-up' : 'fa-arrow-down';
-            const transactionTitle = item.name || 'Без названия';
             return `
-      <div class="transaction ${transactionTypeClass} row">
-        <div class="col-md-7 transaction__details">
-          <div class="transaction__icon">
-            <span class="fa ${transactionIcon} fa-2x"></span>
-          </div>
-          <div class="transaction__info">
-            <h4 class="transaction__title">${transactionTitle}</h4>
-            <div class="transaction__date">${formattedDate}</div>
-          </div>
+    <div class="transaction ${item.type === 'income' ? 'transaction_income' : 'transaction_expense'} row">
+      <div class="col-md-7 transaction__details">
+        <div class="transaction__icon">
+          <span class="fa ${item.type === 'income' ? 'fa-arrow-up' : 'fa-arrow-down'} fa-2x"></span>
         </div>
-        <div class="col-md-3">
-          <div class="transaction__summ">
-            ${item.sum} <span class="currency">₽</span>
-          </div>
-        </div>
-        <div class="col-md-2 transaction__controls">
-          <button class="btn btn-danger transaction__remove" data-id="${item.id}">
-            <i class="fa fa-trash"></i>  
-          </button>
+        <div class="transaction__info">
+          <h4 class="transaction__title">${item.name || 'Без названия'}</h4>
+          <div class="transaction__date">${this.formatDate(item.created_at)}</div>
         </div>
       </div>
-    `;
+      <div class="col-md-3">
+        <div class="transaction__summ">
+          ${item.sum} <span class="currency">₽</span>
+        </div>
+      </div>
+      <div class="col-md-2 transaction__controls">
+        <button class="btn btn-danger transaction__remove" data-id="${item.id}">
+          <i class="fa fa-trash"></i>  
+        </button>
+      </div>
+    </div>
+  `;
         }
         /**
          * Отрисовывает список транзакций на странице

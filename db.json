@@ -77,6 +77,42 @@
       "email": "qivan@demo.ru",
       "password": "demo",
       "id": "cbxn5g538m7rqckhu"
+    },
+    {
+      "name": "Vt",
+      "email": "wwwivan@demo.ru",
+      "password": "1111",
+      "id": "cbxn5g5p4m7uj7ld4"
+    },
+    {
+      "name": "ret",
+      "email": "111ivan@demo.ru",
+      "password": "1111",
+      "id": "cbxn5g71gm7utfxuq"
+    },
+    {
+      "name": "12556",
+      "email": "4444ivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5g4u8m7uugd2b"
+    },
+    {
+      "name": "Vtq",
+      "email": "1111ivan@demo.ru",
+      "password": "1111",
+      "id": "cbxn5g3kcm7uydbnv"
+    },
+    {
+      "name": "Vtwer",
+      "email": "rrrivan@demo.ru",
+      "password": "111",
+      "id": "cbxn5gackm7uyihun"
+    },
+    {
+      "name": "qwert",
+      "email": "tttivan@demo.ru",
+      "password": "demo",
+      "id": "cbxn5gaj4m7uyox39"
     }
   ],
   "accounts": [
@@ -129,16 +165,6 @@
       "name": "122345",
       "user_id": "cbxn5g538m7rqckhu",
       "id": "cbxn5gb8gm7s2mbt6"
-    },
-    {
-      "name": "1235456",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "id": "cbxn5g53cm7s3h2dn"
-    },
-    {
-      "name": "еще один счет",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "id": "cbxn5g5n4m7s8l4a3"
     },
     {
       "name": "банк",
@@ -283,103 +309,13 @@
       "user_id": "1"
     },
     {
-      "id": "cbxn5g2fkm7s881uh",
-      "type": "expense",
-      "name": "казино",
-      "sum": 2000,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-02T22:52:31.960Z"
-    },
-    {
-      "id": "cbxn5g5hgm7s90sh5",
+      "id": "cbxn5g6ogm7uupsq6",
       "type": "income",
-      "name": "работа",
-      "sum": 24000,
-      "account_id": "cbxn5g53cm7s3h2dn",
+      "name": "получил зарплату ",
+      "sum": 55000,
+      "account_id": "cbxn5g2o8m7temyk5",
       "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-02T23:14:52.840Z"
-    },
-    {
-      "id": "cbxn5g4f0m7s9cmai",
-      "type": "income",
-      "name": "подработка",
-      "sum": 8000,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-02T23:24:04.697Z"
-    },
-    {
-      "id": "cbxn5g6h4m7s9cxx0",
-      "type": "expense",
-      "name": "покупка помидор",
-      "sum": 1000,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-02T23:24:19.763Z"
-    },
-    {
-      "id": "cbxn5gb0km7t5i0u3",
-      "type": "income",
-      "name": "авпвп",
-      "sum": 12434,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T14:24:04.538Z"
-    },
-    {
-      "id": "cbxn5g49cm7tayxfx",
-      "type": "income",
-      "name": "у",
-      "sum": 1200,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T16:57:11.372Z"
-    },
-    {
-      "id": "cbxn5g50wm7tb0tnx",
-      "type": "expense",
-      "name": "5",
-      "sum": 1200,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T16:58:39.788Z"
-    },
-    {
-      "id": "cbxn5g63wm7tbwr29",
-      "type": "income",
-      "name": "у",
-      "sum": 1200,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T17:23:29.408Z"
-    },
-    {
-      "id": "cbxn5g6b4m7tcliy0",
-      "type": "income",
-      "name": "у",
-      "sum": 1200,
-      "account_id": "cbxn5g53cm7s3h2dn",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T17:42:45.287Z"
-    },
-    {
-      "id": "cbxn5gskm7tlcq9r",
-      "type": "income",
-      "name": "заработал",
-      "sum": 34000,
-      "account_id": "cbxn5g5n4m7s8l4a3",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T21:47:51.422Z"
-    },
-    {
-      "id": "cbxn5gbg8m7tn7cxn",
-      "type": "income",
-      "name": "заработал",
-      "sum": 34000,
-      "account_id": "cbxn5g5n4m7s8l4a3",
-      "user_id": "cbxn5g6fsm7qo4p7b",
-      "created_at": "2025-03-03T22:39:40.090Z"
+      "created_at": "2025-03-04T18:57:43.853Z"
     }
   ]
 }

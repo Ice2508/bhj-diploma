@@ -84,18 +84,12 @@ class AccountsWidget {
          * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
          * */
     onSelectAccount(element) {
-            console.log('Выбран счёт:', element);
             const activeAccount = this.element.querySelector('.active');
             if (activeAccount) {
                 activeAccount.classList.remove('active');
             }
             element.classList.add('active');
             const accountId = element.dataset.id;
-            console.log('ID счёта:', accountId);
-            if (!accountId) {
-                console.error('Ошибка: у элемента нет data-id');
-                return;
-            }
             App.showPage('transactions', {
                 account_id: accountId
             });
