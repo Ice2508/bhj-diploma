@@ -63,7 +63,7 @@ class TransactionsPage {
             const userConfirmedAcc = confirm('Вы действительно хотите удалить счет?');
             if (userConfirmedAcc) {
                 Account.remove(this.lastOptions, (error, result) => {
-                    TransactionsPage.clear();
+                    this.clear();
                     App.updateWidgets();
                     App.updateForms();
                 });
@@ -100,7 +100,7 @@ class TransactionsPage {
                     console.log('Ошибка при получении данных о счете:', error);
                     return;
                 }
-                this.renderTitle(account.name);
+                this.renderTitle(account.data.name);
                 Transaction.list(options.account_id, (error, transactions) => {
                     if (error) {
                         console.log('Ошибка при получении транзакций:', error);
@@ -173,11 +173,11 @@ class TransactionsPage {
          * */
     renderTransactions(data) {
         const contentElement = document.querySelector('.content');
-        if (data.length === 0) {
+        if (data.data.length === 0) {
             contentElement.innerHTML = '<p>Нет транзакций</p>';
             return;
         }
-        const transactionsHTML = data.map(transaction => this.getTransactionHTML(transaction)).join('');
+        const transactionsHTML = data.data.map(transaction => this.getTransactionHTML(transaction)).join('');
         contentElement.innerHTML = transactionsHTML;
     }
 }

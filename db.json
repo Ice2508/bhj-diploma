@@ -362,6 +362,24 @@
       "account_id": "cbxn5g53cm7s3h2dn",
       "user_id": "cbxn5g6fsm7qo4p7b",
       "created_at": "2025-03-03T17:42:45.287Z"
+    },
+    {
+      "id": "cbxn5gskm7tlcq9r",
+      "type": "income",
+      "name": "заработал",
+      "sum": 34000,
+      "account_id": "cbxn5g5n4m7s8l4a3",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T21:47:51.422Z"
+    },
+    {
+      "id": "cbxn5gbg8m7tn7cxn",
+      "type": "income",
+      "name": "заработал",
+      "sum": 34000,
+      "account_id": "cbxn5g5n4m7s8l4a3",
+      "user_id": "cbxn5g6fsm7qo4p7b",
+      "created_at": "2025-03-03T22:39:40.090Z"
     }
   ]
 }
